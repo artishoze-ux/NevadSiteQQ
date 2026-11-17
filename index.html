@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nevad — нейросеть и ИИ-агент для вашего компьютера</title>
+  <meta name="description" content="Nevad 3 — открытая нейросеть для текста, кода и изображений. Nevad Agent — локальный ИИ-агент, который читает файлы, запускает команды и показывает каждый шаг. Бесплатно.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="Nevad — нейросеть и ИИ-агент для вашего компьютера">
+  <meta property="og:description" content="Открытая нейросеть и агент, которые работают локально. Скачайте один раз — и никакого облака.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d0d0d'/%3E%3Cpath d='M0 0h16v16H0zM16 16h16v16H16z' fill='%23ffffff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Nevad — на главную">
+        <span class="checker" aria-hidden="true"></span>
+        <span class="brand-word">Nevad</span>
+      </a>
+
+      <nav class="nav-center" aria-label="Основная навигация">
+        <a class="nav-link" href="#features">Возможности</a>
+        <a class="nav-link" href="#models">Модели</a>
+        <a class="nav-link" href="#agent">Агент</a>
+        <a class="nav-link" href="#changelog">Обновления</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="nav-subtle" href="#cli">CLI</a>
+        <a class="btn btn-nav" href="#download">
+          <span>Скачать</span>
+          <kbd>D</kbd>
+        </a>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 5h11M2.5 11h11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#features">Возможности</a>
+      <a href="#models">Модели</a>
+      <a href="#agent">Агент</a>
+      <a href="#download">Скачать</a>
+      <a href="#changelog">Обновления</a>
+      <a href="#cli">CLI</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-haze" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-copy">
+          <div class="hero-left">
+            <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span>Nevad 3.1 · Agent 1.4.2</p>
+            <h1 class="display">Ваша нейросеть.<br><span class="ash">Ваш ИИ-агент.</span></h1>
+          </div>
+          <div class="hero-right">
+            <p>Nevad — открытая нейросеть для текста, кода и изображений. Nevad Agent — приложение, которое выполняет задачи прямо на вашем компьютере: читает файлы, запускает команды и показывает каждый шаг.</p>
+            <div class="hero-actions">
+              <button class="btn btn-carbon" type="button" data-download="model">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2.5v7.5M5 7.5 8 10.5l3-3M3 13.5h10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Скачать Nevad</span>
+              </button>
+              <button class="btn btn-lift" type="button" data-download="agent">
+                <span data-os-label>Скачать Агента</span>
+              </button>
+            </div>
+            <p class="hero-note">Бесплатно · Windows, macOS, Linux · Без аккаунта</p>
+          </div>
+        </div>
+
+        <div class="window-shell">
+          <div class="app-window" role="region" aria-label="Демонстрация интерфейса Nevad Agent: сессия рефакторинга auth.py">
+            <aside class="rail" aria-hidden="true">
+              <span class="rail-brand checker"></span>
+              <span class="rail-icon is-active">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 8.5a5.5 5.5 0 0 1-5.5 5.5H4l-2 1.5V8.5A5.5 5.5 0 0 1 7.5 3h.5a5.5 5.5 0 0 1 5.5 5.5Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M5.5 7.5h5M5.5 10h3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              </span>
+              <span class="rail-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2.5" y="2.5" width="4.5" height="4.5" rx="1" stroke="currentColor" stroke-width="1.2"/><rect x="9" y="2.5" width="4.5" height="4.5" rx="1" stroke="currentColor" stroke-width="1.2"/><rect x="2.5" y="9" width="4.5" height="4.5" rx="1" stroke="currentColor" stroke-width="1.2"/><rect x="9" y="9" width="4.5" height="4.5" rx="1" stroke="currentColor" stroke-width="1.2"/></svg>
+              </span>
+              <span class="rail-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 2.5h5L12.5 6v7.5H4z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M9 2.5V6h3.5" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="rail-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2.5" y="3" width="11" height="10" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 6.5 7.5 8l-2 1.5M8.5 10h2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="rail-spacer"></span>
+              <span class="rail-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 5h10M3 11h10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><circle cx="6" cy="5" r="1.4" fill="#ffffff" stroke="currentColor" stroke-width="1.2"/><circle cx="10" cy="11" r="1.4" fill="#ffffff" stroke="currentColor" stroke-width="1.2"/></svg>
+              </span>
+              <span class="rail-avatar">АЛ</span>
+            </aside>
+
+            <div class="win-main">
+              <header class="win-head">
+                <div class="win-breadcrumb" aria-hidden="true">
+                  <span class="crumb-brand">Nevad Agent</span>
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span>Сессии</span>
+                  <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <span class="crumb-current">auth-refactor <span>·&nbsp;#1842</span></span>
+                </div>
+                <div class="win-head-actions">
+                  <div class="avatar-stack" aria-hidden="true">
+                    <span class="mini-avatar av-1">АЛ</span>
+                    <span class="mini-avatar av-2">МК</span>
+                    <span class="mini-avatar av-3">СВ</span>
+                  </div>
+                  <span class="btn btn-key">Поделиться</span>
+                </div>
+              </header>
+
+              <div class="win-body">
+                <aside class="prop-pane" aria-hidden="true">
+                  <div class="prop">
+                    <span class="prop-label">Модель</span>
+                    <span class="prop-value">Nevad 3 Pro <span class="inline-status"><span class="dot dot-blue"></span>локально</span></span>
+                  </div>
+                  <div class="prop">
+                    <span class="prop-label">Контекст</span>
+                    <span class="prop-value">48 210 <span class="fog">/ 128 000</span></span>
+                    <span class="meter"><span style="width:38%"></span></span>
+                  </div>
+                  <div class="prop">
+                    <span class="prop-label">Разрешения</span>
+                    <span class="chips">
+                      <span class="chip-mini">Файлы</span>
+                      <span class="chip-mini">Терминал</span>
+                      <span class="chip-mini">Git</span>
+                    </span>
+                  </div>
+                  <div class="prop">
+                    <span class="prop-label">Песочница</span>
+                    <span class="prop-value"><span class="inline-status"><span class="dot dot-green"></span>Docker · изолирована</span></span>
+                  </div>
+                  <div class="prop">
+                    <span class="prop-label">Стоимость</span>
+                    <span class="prop-value">0 ₽ <span class="fog">за запрос</span></span>
+                  </div>
+                  <div class="prop-divider"></div>
+                  <div class="prop">
+                    <span class="prop-label">Файлы сессии</span>
+                    <span class="file-link"><span class="file-status">M</span>app/auth.py</span>
+                    <span class="file-link"><span class="file-status plus">A</span>tests/test_auth.py</span>
+                    <span class="file-link"><span class="file-status fog">·</span>.nevad/plan.md</span>
+                  </div>
+                </aside>
+
+                <div class="timeline-wrap">
+                  <div class="tabs-row">
+                    <div class="seg" role="tablist" aria-label="Панели сессии">
+                      <button class="seg-btn is-active" id="tab-activity" role="tab" aria-selected="true" aria-controls="panel-activity" data-tab="activity" type="button">Активность</button>
+                      <button class="seg-btn" id="tab-session" role="tab" aria-selected="false" aria-controls="panel-session" data-tab="session" type="button" tabindex="-1">Сессия</button>
+                      <button class="seg-btn" id="tab-findings" role="tab" aria-selected="false" aria-controls="panel-findings" data-tab="findings" type="button" tabindex="-1">Находки <span class="seg-count">3</span></button>
+                    </div>
+                    <span class="step-chip" aria-hidden="true">Шаг 4 из 6</span>
+                  </div>
+
+                  <div class="timeline" id="panel-activity" role="tabpanel" aria-labelledby="tab-activity" data-panel="activity">
+                    <div class="entry">
+                      <span class="avatar-24 av-1">АЛ</span>
+                      <div class="entry-body">
+                        <div class="entry-meta"><span class="entry-name">Артём</span><span class="entry-time">12:04</span></div>
+                        <p class="entry-text">Почини гонку в <code>refresh()</code> и добавь тест на истёкший токен.</p>
+                      </div>
+                    </div>
+
+                    <div class="entry">
+                      <span class="status status-blue">
+                        <svg width="10" height="10" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2.5 9.2 6.3 13 7.5l-3.8 1.2L8 12.5 6.8 8.7 3 7.5l3.8-1.2Z" fill="currentColor"/></svg>
+                      </span>
+                      <div class="entry-body">
+                        <div class="entry-meta"><span class="entry-name">Агент</span><span class="entry-time">12:06</span></div>
+                        <p class="entry-text">Прочитал 4 файла. Нашёл блокировку без таймаута в <code>refresh()</code>.</p>
+                        <div class="chips tight">
+                          <span class="chip-mini">app/auth.py</span>
+                          <span class="chip-mini">tests/test_auth.py</span>
+                          <span class="chip-mini">+2</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="diff-card">
+                      <div class="diff-head">
+                        <span class="diff-file"><span class="diff-file-dot"></span>app/auth.py</span>
+                        <span class="diff-stats"><span class="add">+6</span> <span class="del">−4</span></span>
+                        <span class="diff-open">Открыть</span>
+                      </div>
+                      <div class="diff-body">
+                        <div class="diff-line">
+                          <span class="ln">34</span><span class="mark"></span>
+                          <code>    <span class="tok-k">async</span> <span class="tok-k">with</span> self._lock:</code>
+                        </div>
+                        <div class="diff-line">
+                          <span class="ln">35</span><span class="mark"></span>
+                          <code>        <span class="tok-k">if</span> <span class="tok-k">not</span> token:</code>
+                        </div>
+                        <div class="diff-line">
+                          <span class="ln">36</span><span class="mark"></span>
+                          <code>            <span class="tok-k">raise</span> <span class="tok-f">AuthError</span>(<span class="tok-s">"no token"</span>)</code>
+                        </div>
+                        <div class="diff-line is-del">
+                          <span class="ln">37</span><span class="mark">−</span>
+                          <code>        <span class="tok-k">return</span> <span class="tok-k">await</span> self.<span class="tok-f">_rotate</span>(token)</code>
+                        </div>
+                        <div class="diff-line is-del">
+                          <span class="ln">38</span><span class="mark">−</span>
+                          <code>        <span class="tok-c"># блокировка держится бесконечно</span></code>
+                        </div>
+                        <div class="diff-line is-add">
+                          <span class="ln">37</span><span class="mark">+</span>
+                          <code>        timeout = self.settings.refresh_timeout</code>
+                        </div>
+                        <div class="diff-line is-add">
+                          <span class="ln">38</span><span class="mark">+</span>
+                          <code>        <span class="tok-k">async</span> <span class="tok-k">with</span> self._lock.<span class="tok-f">with_timeout</span>(timeout):</code>
+                        </div>
+                        <div class="diff-line is-add">
+                          <span class="ln">39</span><span class="mark">+</span>
+                          <code>            <span class="tok-k">if</span> <span class="tok-k">not</span> token <span class="tok-k">or</span> token.expired:</code>
+                        </div>
+                        <div class="diff-line is-add">
+                          <span class="ln">40</span><span class="mark">+</span>
+                          <code>                <span class="tok-k">return</span> <span class="tok-k">await</span> self.<span class="tok-f">_rotate</span>(token)</code>
+                        </div>
+                      </div>
+                      <div class="diff-foot">
+                        <span class="inline-status"><span class="dot dot-green"></span>Дифф применён в песочнице</span>
+                        <span class="fog">2,4 с</span>
+                      </div>
+                    </div>
+
+                    <div class="entry entry-compact">
+                      <span class="status status-green">
+                        <svg width="10" height="10" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.2 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </span>
+                      <div class="entry-body">
+                        <p class="entry-text">Запустил <code>pytest tests/</code> — <span class="ok-text">214 passed</span>, 1 skipped.</p>
+                      </div>
+                      <span class="entry-time">38,4 с</span>
+                    </div>
+
+                    <div class="entry entry-compact is-live">
+                      <span class="status status-live"><span class="pulse-dot"></span></span>
+                      <div class="entry-body">
+                        <p class="entry-text">Проверяю дифф и готовлю коммит…</p>
+                        <span class="typing"><span></span><span></span><span></span></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel" id="panel-session" role="tabpanel" aria-labelledby="tab-session" data-panel="session" hidden>
+                    <div class="panel-pad">
+                      <div class="panel-head">
+                        <h3>Сессия #1842</h3>
+                        <span class="chip-mini">локально</span>
+                      </div>
+                      <dl class="session-meta">
+                        <div><dt>Создана</dt><dd>17 ноября, 12:04</dd></div>
+                        <div><dt>Модель</dt><dd>Nevad 3 Pro · Q4_K_M</dd></div>
+                        <div><dt>Инструменты</dt><dd>12 вызовов · 0 ошибок</dd></div>
+                        <div><dt>Токены</dt><dd>48 210 из 128 000</dd></div>
+                        <div><dt>Стоимость</dt><dd>0 ₽ · всё на устройстве</dd></div>
+                      </dl>
+                      <div class="panel-section">
+                        <span class="prop-label">Файлы</span>
+                        <span class="file-link"><span class="file-status">M</span>app/auth.py</span>
+                        <span class="file-link"><span class="file-status plus">A</span>tests/test_auth.py</span>
+                        <span class="file-link"><span class="file-status fog">·</span>.nevad/plan.md</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel" id="panel-findings" role="tabpanel" aria-labelledby="tab-findings" data-panel="findings" hidden>
+                    <div class="panel-pad">
+                      <div class="panel-head">
+                        <h3>Находки</h3>
+                        <span class="chip-mini">3</span>
+                      </div>
+                      <ul class="finding-list">
+                        <li><span class="dot dot-tomato"></span><span><b>Гонка в refresh()</b><small>app/auth.py:37 · блокировка без таймаута</small></span><span class="finding-tag">критично</span></li>
+                        <li><span class="dot dot-amber"></span><span><b>Нет теста на expired</b><small>tests/test_auth.py · покрытие 71%</small></span><span class="finding-tag">средне</span></li>
+                        <li><span class="dot dot-blue"></span><span><b>Дублирование rotate</b><small>app/auth.py:40 · 2 вызова</small></span><span class="finding-tag">совет</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="composer" aria-hidden="true">
+                    <span class="composer-placeholder">Попросите агента о чём угодно…</span>
+                    <span class="composer-right">
+                      <span class="inline-status"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><rect x="3.5" y="7" width="9" height="6.5" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 7V5.5a2.5 2.5 0 0 1 5 0V7" stroke="currentColor" stroke-width="1.2"/></svg>локально</span>
+                      <kbd>⌘K</kbd>
+                      <span class="send-key">
+                        <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h9M9 4.5 12.5 8 9 11.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="logos" aria-label="Компании, которые используют Nevad">
+      <div class="container">
+        <p class="logos-label">Используют команды, которым важна приватность</p>
+        <div class="marquee">
+          <div class="marquee-track">
+            <span class="logo-word serif">Полюс</span>
+            <span class="logo-word mono">ATLAS</span>
+            <span class="logo-word">Контур</span>
+            <span class="logo-word serif">Восход</span>
+            <span class="logo-word caps">MERIDIAN</span>
+            <span class="logo-word mono">sector_</span>
+            <span class="logo-word serif">Норд</span>
+            <span class="logo-word">Кибер</span>
+            <span class="logo-word serif" aria-hidden="true">Полюс</span>
+            <span class="logo-word mono" aria-hidden="true">ATLAS</span>
+            <span class="logo-word" aria-hidden="true">Контур</span>
+            <span class="logo-word serif" aria-hidden="true">Восход</span>
+            <span class="logo-word caps" aria-hidden="true">MERIDIAN</span>
+            <span class="logo-word mono" aria-hidden="true">sector_</span>
+            <span class="logo-word serif" aria-hidden="true">Норд</span>
+            <span class="logo-word" aria-hidden="true">Кибер</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="statement-wrap" aria-label="Что умеет Nevad">
+      <div class="container">
+        <p class="statement" id="statement">
+          Nevad <span class="chip chip-blue">находит</span> ошибки в вашем коде, <span class="chip">пишет</span> исправления, <span class="chip">запускает</span> тесты и объясняет каждое решение — не отправляя ни байта в облако.
+        </p>
+      </div>
+    </section>
+
+    <section class="feature-row container" id="features" aria-label="Возможности Nevad">
+      <article class="feature-card" data-reveal>
+        <div class="feature-frame" aria-hidden="true">
+          <div class="sk-ui">
+            <div class="sk-head">
+              <span class="sk-dot"></span><span class="sk-dot"></span><span class="sk-dot"></span>
+              <span class="sk-title">nevad-workspace</span>
+              <span class="sk-kbd">⌘K</span>
+            </div>
+            <div class="sk-tree">
+              <div class="sk-row"><span class="sk-folder"></span>src</div>
+              <div class="sk-row indent"><span class="sk-folder"></span>auth</div>
+              <div class="sk-row indent-2 active"><span class="sk-sq"></span>session.py<span class="sk-tag">128 строк</span></div>
+              <div class="sk-row indent-2"><span class="sk-sq fog"></span>tokens.py</div>
+              <div class="sk-row indent"><span class="sk-folder"></span>api</div>
+              <div class="sk-row indent-2"><span class="sk-sq fog"></span>client.py</div>
+              <div class="sk-row"><span class="sk-file"></span>pyproject.toml</div>
+            </div>
+            <div class="sk-foot"><span class="dot dot-blue"></span>Индекс проекта готов · 1 284 файла</div>
+          </div>
+        </div>
+        <h3>Понимает проект целиком</h3>
+        <p>Индексирует репозиторий локально: 128K контекста, поиск по символам и истории Git — без загрузки кода наружу.</p>
+      </article>
+
+      <article class="feature-card" data-reveal>
+        <div class="feature-frame" aria-hidden="true">
+          <div class="sk-ui">
+            <div class="sk-head">
+              <span class="sk-dot"></span><span class="sk-dot"></span><span class="sk-dot"></span>
+              <span class="sk-title">agent — zsh</span>
+              <span class="sk-kbd">⌘J</span>
+            </div>
+            <div class="sk-term">
+              <p><span class="term-prompt">›</span> почини гонку в auth</p>
+              <p class="term-muted">читаю app/auth.py, tests/test_auth.py</p>
+              <p class="term-muted">план: 4 шага · песочница docker</p>
+              <p class="term-ok">✓ дифф применён</p>
+              <p class="term-ok">✓ pytest — 214 passed</p>
+              <p class="term-live"><span class="pulse-dot"></span>готовлю коммит…</p>
+            </div>
+            <div class="sk-foot"><span class="dot dot-green"></span>Задача выполняется автономно</div>
+          </div>
+        </div>
+        <h3>Доводит задачи до конца</h3>
+        <p>Сам запускает тесты, читает вывод и повторяет попытку, пока дифф не станет чистым. Вы можете остановить его в любой момент.</p>
+      </article>
+
+      <article class="feature-card" data-reveal>
+        <div class="feature-frame" aria-hidden="true">
+          <div class="sk-ui">
+            <div class="sk-head">
+              <span class="sk-dot"></span><span class="sk-dot"></span><span class="sk-dot"></span>
+              <span class="sk-title">privacy.log</span>
+              <span class="sk-kbd">100%</span>
+            </div>
+            <div class="sk-privacy">
+              <div class="privacy-row"><span>Запросы к API</span><span class="privacy-value">0</span></div>
+              <div class="privacy-row"><span>Телеметрия</span><span class="privacy-value">0</span></div>
+              <div class="privacy-row"><span>Облачные токены</span><span class="privacy-value">0</span></div>
+              <div class="privacy-shield">
+                <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M8 2 13 4v4c0 3.2-2 5.3-5 6-3-.7-5-2.8-5-6V4l5-2Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M5.8 8.2 7.4 9.8l3-3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span><b>0 байт наружу</b><small>модель, файлы и история — на диске</small></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3>Ничего не отправляет наружу</h3>
+        <p>Модель, история и файлы остаются на вашем диске. Телеметрия выключена на уровне сборки и не включается.</p>
+      </article>
+    </section>
+
+    <section class="testimonial container" aria-label="Отзыв клиента">
+      <div class="quote-panel" data-reveal>
+        <div class="quote-haze" aria-hidden="true"></div>
+        <blockquote>«Я перестал переключаться между чатом, терминалом и редактором. Пишу задачу, ухожу за кофе — возвращаюсь к готовому диффу и зелёным тестам».</blockquote>
+        <div class="quote-author">
+          <span class="avatar-48">АЛ</span>
+          <span class="quote-person"><span class="quote-name">Артём Лебедев</span><span class="quote-role">технический директор, Полюс</span></span>
+        </div>
+      </div>
+    </section>
+
+<section class="alt-section container" id="agent">
+      <div class="alt-copy" data-reveal>
+        <p class="eyebrow">Nevad Agent</p>
+        <h2 class="h2">Не подсказывает.<br><span class="ash">Просто делает.</span></h2>
+        <p class="alt-lead">Агент работает в вашей папке: читает код, правит файлы, запускает команды и проверяет результат. Вы видите план, каждый вызов инструмента и полный дифф — и можете остановить работу в любой момент.</p>
+        <div class="cap-list">
+          <div class="cap"><span class="cap-title">Файлы и Git</span><span class="cap-note">Читает, правит, коммитит</span></div>
+          <div class="cap"><span class="cap-title">Терминал</span><span class="cap-note">bash, zsh, PowerShell</span></div>
+          <div class="cap"><span class="cap-title">Браузер</span><span class="cap-note">Открывает документацию</span></div>
+          <div class="cap"><span class="cap-title">MCP-инструменты</span><span class="cap-note">Любой сервер по протоколу</span></div>
+        </div>
+        <a class="text-link" href="#download">Установить Агента <span aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="visual-frame" data-reveal aria-hidden="true">
+        <div class="visual-glow"></div>
+        <div class="product-card plan-card">
+          <div class="pc-head">
+            <span class="pc-title"><span class="pc-mark checker"></span>План задачи</span>
+            <span class="chip-mini">4 шага</span>
+          </div>
+          <div class="plan-progress"><span style="width:58%"></span></div>
+          <div class="plan-meta"><span>auth-refactor</span><span>2 из 4</span></div>
+          <ul class="plan-list">
+            <li class="done"><span class="plan-check">✓</span><span><b>Прочитать файлы</b><small>app/auth.py · tests/test_auth.py</small></span></li>
+            <li class="done"><span class="plan-check">✓</span><span><b>Найти причину гонки</b><small>блокировка без таймаута · строка 37</small></span></li>
+            <li class="active"><span class="plan-check">●</span><span><b>Переписать refresh()</b><small>добавить timeout и проверку expired</small></span></li>
+            <li><span class="plan-check">○</span><span><b>Запустить тесты и коммит</b><small>pytest · git commit</small></span></li>
+          </ul>
+          <div class="pc-foot">
+            <span class="inline-status"><span class="dot dot-blue"></span>Nevad 3 Pro · песочница</span>
+            <span class="fog">38 с</span>
+          </div>
+          <div class="floating-key">Остановить <kbd>Esc</kbd></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt-section reverse container" id="models">
+      <div class="alt-copy" data-reveal>
+        <p class="eyebrow">Nevad 3</p>
+        <h2 class="h2">Три размера.<br><span class="ash">Один характер.</span></h2>
+        <p class="alt-lead">От Pro на 70 миллиардов параметров до Embed на 40 миллионов. Все версии обучены на одном наборе данных и работают через один CLI, SDK и локальный API, совместимый с OpenAI.</p>
+        <div class="cap-list">
+          <div class="cap"><span class="cap-title">Nevad 3 Pro · 70B</span><span class="cap-note">48 ГБ RAM · 42 ГБ</span></div>
+          <div class="cap"><span class="cap-title">Nevad 3 Air · 24B</span><span class="cap-note">24 ГБ RAM · 14,5 ГБ</span></div>
+          <div class="cap"><span class="cap-title">Nevad 3 Embed · 40M</span><span class="cap-note">2 ГБ RAM · 80 МБ</span></div>
+          <div class="cap"><span class="cap-title">128K контекст</span><span class="cap-note">Русский, английский, код</span></div>
+        </div>
+        <a class="text-link" href="#models-table">Скачать модели <span aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="visual-frame" data-reveal aria-hidden="true">
+        <div class="visual-glow"></div>
+        <div class="product-card model-card">
+          <div class="pc-head">
+            <span class="pc-title"><span class="pc-mark checker"></span>Nevad 3 Pro</span>
+            <span class="chip-mini">GGUF · Q4_K_M</span>
+          </div>
+          <div class="model-stats">
+            <div><b>70B</b><span>параметров</span></div>
+            <div><b>128K</b><span>контекст</span></div>
+            <div><b>38</b><span>токенов/с</span></div>
+          </div>
+          <div class="bench">
+            <div class="bench-row"><span>Код</span><span class="bench-track"><span class="bench-fill blue" style="width:94%"></span></span><span class="bench-num">94</span></div>
+            <div class="bench-row"><span>Русский</span><span class="bench-track"><span class="bench-fill" style="width:90%"></span></span><span class="bench-num">90</span></div>
+            <div class="bench-row"><span>Анализ</span><span class="bench-track"><span class="bench-fill" style="width:88%"></span></span><span class="bench-num">88</span></div>
+            <div class="bench-row"><span>Текст</span><span class="bench-track"><span class="bench-fill" style="width:92%"></span></span><span class="bench-num">92</span></div>
+          </div>
+          <div class="pc-foot">
+            <span class="inline-status"><span class="dot dot-green"></span>работает офлайн</span>
+            <span class="fog">MIT-совместимая лицензия</span>
+          </div>
+          <div class="floating-key">38 tok/s <kbd>локально</kbd></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt-section container" id="security">
+      <div class="alt-copy" data-reveal>
+        <p class="eyebrow">Безопасность</p>
+        <h2 class="h2">Вы разрешаете.<br><span class="ash">Вы видите.</span></h2>
+        <p class="alt-lead">Каждый инструмент работает только после подтверждения. Правила можно сузить до папки, команды или домена, а журнал покажет, что именно агент прочитал, изменил и запустил.</p>
+        <div class="cap-list">
+          <div class="cap"><span class="cap-title">Песочница</span><span class="cap-note">Docker или встроенная</span></div>
+          <div class="cap"><span class="cap-title">Лимиты</span><span class="cap-note">Токены, время, команды</span></div>
+          <div class="cap"><span class="cap-title">Журнал</span><span class="cap-note">Экспорт в JSONL</span></div>
+          <div class="cap"><span class="cap-title">Офлайн</span><span class="cap-note">Полный air-gap режим</span></div>
+        </div>
+        <a class="text-link" href="#privacy">Прочитать про безопасность <span aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="visual-frame" data-reveal aria-hidden="true">
+        <div class="visual-glow"></div>
+        <div class="product-card log-card">
+          <div class="pc-head">
+            <span class="pc-title"><span class="pc-mark checker"></span>Журнал действий</span>
+            <span class="chip-mini">128 записей</span>
+          </div>
+          <div class="log-list">
+            <div class="log-row">
+              <span class="log-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 2.5h5L12.5 6v7.5H4z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M9 2.5V6h3.5" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></span>
+              <span class="log-body"><b>app/auth.py</b><small>изменён · 14:32</small></span>
+              <span class="log-tag ok">Разрешено</span>
+            </div>
+            <div class="log-row">
+              <span class="log-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="2.5" y="3" width="11" height="10" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 6.5 7.5 8l-2 1.5M8.5 10h2.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span class="log-body"><b>pytest tests/</b><small>214 passed · 14:33</small></span>
+              <span class="log-tag ok">Разрешено</span>
+            </div>
+            <div class="log-row">
+              <span class="log-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M2.5 8h11M8 2.5c1.8 1.6 1.8 9.4 0 11M8 2.5c-1.8 1.6-1.8 9.4 0 11" stroke="currentColor" stroke-width="1.2"/></svg></span>
+              <span class="log-body"><b>api.pypi.org</b><small>запрос заблокирован · 14:34</small></span>
+              <span class="log-tag no">Запрещено</span>
+            </div>
+            <div class="log-row">
+              <span class="log-icon"><svg width="14" height="14" viewBox="0 0 16 16" fill="none"><circle cx="5" cy="4" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="11" cy="8" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="5" cy="12" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M6.5 4h1A2.5 2.5 0 0 1 10 6.5v0A2.5 2.5 0 0 1 7.5 9h-1M6.5 12h1A2.5 2.5 0 0 0 10 9.5v0" stroke="currentColor" stroke-width="1.2"/></svg></span>
+              <span class="log-body"><b>git commit</b><small>fix: refresh race · 14:35</small></span>
+              <span class="log-tag ok">Разрешено</span>
+            </div>
+          </div>
+          <div class="pc-foot">
+            <span class="inline-status"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><rect x="3.5" y="7" width="9" height="6.5" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5.5 7V5.5a2.5 2.5 0 0 1 5 0V7" stroke="currentColor" stroke-width="1.2"/></svg>Сеть только для docs.python.org</span>
+          </div>
+          <div class="floating-key">Правило папки <kbd>/projects</kbd></div>
+        </div>
+      </div>
+    </section>
+
+<section class="downloads container" id="download">
+      <div class="section-head" data-reveal>
+        <div>
+          <p class="eyebrow">Скачать</p>
+          <h2 class="h2">Скачайте один раз.<br><span class="ash">Работайте офлайн.</span></h2>
+        </div>
+        <p>Один установщик для агента и один файл модели. Без аккаунта, без подписки и без телеметрии. Все сборки подписаны, контрольные суммы опубликованы.</p>
+      </div>
+
+      <div class="os-row" data-reveal>
+        <div class="os-tabs" role="group" aria-label="Выберите операционную систему">
+          <button class="os-tab is-active" type="button" aria-pressed="true" data-os="windows">Windows</button>
+          <button class="os-tab" type="button" aria-pressed="false" data-os="macos">macOS</button>
+          <button class="os-tab" type="button" aria-pressed="false" data-os="linux">Linux</button>
+        </div>
+        <span class="os-hint" data-os-hint>Система определена автоматически</span>
+      </div>
+
+      <div class="download-panel" data-reveal>
+        <div class="download-board">
+          <div class="download-cell">
+            <div class="dc-top">
+              <span class="icon-tile icon-tile-lg">
+                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2.5v7.5M5 7.5 8 10.5l3-3M3 13.5h10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="dc-label">Nevad Agent</span>
+            </div>
+            <h3>Приложение для рабочего стола</h3>
+            <p>Чат, план задач, терминал и диффы в одном окне. Работает с любой моделью Nevad и MCP-инструментами.</p>
+            <div class="dc-meta"><span data-os-name>Windows</span><span class="meta-sep"></span><span data-agent-file>NevadAgent-1.4.2-win-x64.exe</span><span class="meta-sep"></span><span data-agent-size>148 МБ</span></div>
+            <div class="checksum">sha256 <code data-agent-sha>9f2c4b7e…a71e</code><button class="icon-copy" type="button" data-copy="agent-sha" aria-label="Скопировать контрольную сумму агента"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M10.5 5.5V4A1.5 1.5 0 0 0 9 2.5H4A1.5 1.5 0 0 0 2.5 4v5A1.5 1.5 0 0 0 4 10.5h1.5" stroke="currentColor" stroke-width="1.2"/></svg></button></div>
+            <div class="dc-actions">
+              <button class="btn btn-lift" type="button" data-download="agent">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2.5v7.5M5 7.5 8 10.5l3-3M3 13.5h10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span data-agent-button>Скачать для Windows</span>
+              </button>
+              <span class="dc-note">Бесплатно · обновления внутри приложения</span>
+            </div>
+          </div>
+
+          <div class="download-cell">
+            <div class="dc-top">
+              <span class="icon-tile icon-tile-lg">
+                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2.5 9.2 6.3 13 7.5l-3.8 1.2L8 12.5 6.8 8.7 3 7.5l3.8-1.2Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+              </span>
+              <span class="dc-label">Nevad 3 Pro</span>
+            </div>
+            <h3>Открытые веса</h3>
+            <p>Квантованная модель для Nevad Agent, Ollama, LM Studio и llama.cpp. Один файл — и модель работает без интернета.</p>
+            <div class="dc-meta"><span>Q4_K_M</span><span class="meta-sep"></span><span>70B</span><span class="meta-sep"></span><span>42 ГБ</span></div>
+            <div class="checksum">sha256 <code data-model-sha>c81d6a02…4f9b</code><button class="icon-copy" type="button" data-copy="model-sha" aria-label="Скопировать контрольную сумму модели"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M10.5 5.5V4A1.5 1.5 0 0 0 9 2.5H4A1.5 1.5 0 0 0 2.5 4v5A1.5 1.5 0 0 0 4 10.5h1.5" stroke="currentColor" stroke-width="1.2"/></svg></button></div>
+            <div class="dc-actions">
+              <button class="btn btn-lift" type="button" data-download="model" data-model="pro">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2.5v7.5M5 7.5 8 10.5l3-3M3 13.5h10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>Скачать модель</span>
+              </button>
+              <span class="dc-note">Нужно 48 ГБ RAM · или 40 ГБ VRAM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cli-card" id="cli" data-reveal>
+        <div class="cli-head">
+          <span class="cli-title"><span class="diff-file-dot"></span>Установка из терминала <span class="chip-mini" data-os-name>Windows</span></span>
+          <button class="copy-btn" type="button" data-copy-command aria-label="Скопировать команду установки">
+            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M10.5 5.5V4A1.5 1.5 0 0 0 9 2.5H4A1.5 1.5 0 0 0 2.5 4v5A1.5 1.5 0 0 0 4 10.5h1.5" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span>Копировать</span>
+          </button>
+        </div>
+        <div class="cli-body">
+          <span class="cli-prompt">$</span>
+          <code data-cli>winget install --id Nevad.Agent -e</code>
+        </div>
+        <div class="cli-out">
+          <span class="cli-ok">✓</span>
+          <span>Nevad Agent 1.4.2 установлен · запустите <code>nevad</code> в папке проекта</span>
+        </div>
+      </div>
+
+      <div class="models-table" id="models-table" data-reveal>
+        <div class="table-head">
+          <h3 class="table-title">Все сборки Nevad 3</h3>
+          <span class="table-note">GGUF · MLX · .nevad</span>
+        </div>
+        <div class="model-row model-row-head" aria-hidden="true">
+          <span>Модель</span><span>Формат</span><span>Размер</span><span>Требования</span><span></span>
+        </div>
+        <div class="model-row">
+          <span class="model-name"><b>Nevad 3 Pro</b><small>максимальное качество для сложных задач</small></span>
+          <span class="mono-cell">Q4_K_M</span>
+          <span class="mono-cell">42 ГБ</span>
+          <span class="muted-cell">48 ГБ RAM</span>
+          <button class="text-download" type="button" data-download="model" data-model="pro">Скачать <span aria-hidden="true">↓</span></button>
+        </div>
+        <div class="model-row">
+          <span class="model-name"><b>Nevad 3 Air</b><small>баланс скорости и качества для ноутбука</small></span>
+          <span class="mono-cell">Q4_K_M</span>
+          <span class="mono-cell">14,5 ГБ</span>
+          <span class="muted-cell">24 ГБ RAM</span>
+          <button class="text-download" type="button" data-download="model" data-model="air">Скачать <span aria-hidden="true">↓</span></button>
+        </div>
+        <div class="model-row">
+          <span class="model-name"><b>Nevad 3 Embed</b><small>поиск и индексация больших репозиториев</small></span>
+          <span class="mono-cell">F16</span>
+          <span class="mono-cell">80 МБ</span>
+          <span class="muted-cell">2 ГБ RAM</span>
+          <button class="text-download" type="button" data-download="model" data-model="embed">Скачать <span aria-hidden="true">↓</span></button>
+        </div>
+      </div>
+    </section>
+
+<section class="compliance container" id="privacy" data-reveal>
+      <div class="compliance-panel">
+        <div class="compliance-cell">
+          <p class="eyebrow">Приватность</p>
+          <h2 class="h2">Приватно по умолчанию.<br><span class="ash">Локально по дизайну.</span></h2>
+          <a class="text-link" href="#models">Как это устроено <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="compliance-cell">
+          <span class="icon-tile">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2 13 4v4c0 3.2-2 5.3-5 6-3-.7-5-2.8-5-6V4l5-2Z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/><path d="M5.8 8.2 7.4 9.8l3-3" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <p class="compliance-line">Ваш компьютер — единственный сервер.</p>
+          <p class="compliance-sub">Ни очередей, ни лимитов.</p>
+          <p class="compliance-meta">Интернет нужен только для загрузки.</p>
+        </div>
+        <div class="compliance-cell">
+          <span class="icon-tile">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="5.5" cy="8" r="2.5" stroke="currentColor" stroke-width="1.25"/><path d="M8 8h5.5M11 8v2M13 8v1.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/></svg>
+          </span>
+          <p class="compliance-line">Открытые веса. Проверяемый код.</p>
+          <p class="compliance-sub">Лицензия Nevad Open.</p>
+          <p class="compliance-meta">Для личного и коммерческого использования.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="releases container" id="changelog">
+      <div class="section-head compact" data-reveal>
+        <div>
+          <p class="eyebrow">Обновления</p>
+          <h2 class="h2">Последние изменения</h2>
+        </div>
+        <a class="text-link" href="#download">Скачать свежую версию <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="release-grid">
+        <article class="release" data-reveal>
+          <time datetime="2026-11-12">12 ноября 2026</time>
+          <h3>Agent 1.4.2: фоновые задачи</h3>
+          <p>Агент продолжает работу при закрытом окне. Уведомление покажет последний шаг, время и стоимость — даже если она нулевая.</p>
+        </article>
+        <article class="release" data-reveal>
+          <time datetime="2026-10-28">28 октября 2026</time>
+          <h3>Nevad 3.1: лучше в коде</h3>
+          <p>Новый набор RL-задач поднял pass@1 на 9,4%, а контекст вырос до 128K без заметного роста памяти.</p>
+        </article>
+        <article class="release" data-reveal>
+          <time datetime="2026-10-09">09 октября 2026</time>
+          <h3>MCP-мост и правила папок</h3>
+          <p>Подключение любых MCP-серверов, ограничения на команды и домены, экспорт журнала действий в JSONL.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-haze" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer-cta" data-reveal>
+        <p class="eyebrow">Начните сегодня</p>
+        <h2 class="footer-display">Заберите Nevad себе.<br><span class="ash">Остальное останется у&nbsp;вас.</span></h2>
+        <div class="footer-actions">
+          <button class="btn btn-carbon" type="button" data-download="agent">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2.5v7.5M5 7.5 8 10.5l3-3M3 13.5h10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Скачать бесплатно</span>
+          </button>
+          <a class="btn btn-lift" href="#cli">Документация</a>
+        </div>
+        <div class="platform-row" aria-label="Поддерживаемые платформы">
+          <span class="platform-key" title="Windows">WIN</span>
+          <span class="platform-key" title="macOS">MAC</span>
+          <span class="platform-key" title="Linux">LNX</span>
+          <span class="platform-note">Версия 1.4.2 · модель 42 ГБ · без аккаунта</span>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <span class="footer-heading">Продукт</span>
+          <a href="#models">Nevad 3</a>
+          <a href="#agent">Nevad Agent</a>
+          <a href="#cli">CLI и SDK</a>
+          <a href="#download">Требования</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-heading">Ресурсы</span>
+          <a href="#cli">Документация</a>
+          <a href="#changelog">Изменения</a>
+          <a href="#models">Бенчмарки</a>
+          <a href="#privacy">Статус</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-heading">Компания</span>
+          <a href="#top">О проекте</a>
+          <a href="#changelog">Блог</a>
+          <a href="#features">Возможности</a>
+          <a href="#privacy">Безопасность</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-heading">Правовое</span>
+          <a href="#" data-demo-link>Лицензия</a>
+          <a href="#" data-demo-link>Конфиденциальность</a>
+          <a href="#" data-demo-link>Условия</a>
+          <a href="#" data-demo-link>Cookies</a>
+        </div>
+      </div>
+
+      <div class="footer-mark" aria-hidden="true">Nevad</div>
+
+      <div class="footer-bottom">
+        <span class="footer-legal"><span class="checker checker-sm" aria-hidden="true"></span>© 2026 Nevad Labs</span>
+        <span class="footer-legal">Сделано локально · демо-концепт <span class="demo-chip">DEMO</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="dl-dialog" id="downloadDialog" aria-labelledby="dlTitle">
+    <div class="dl-inner">
+      <div class="dl-head">
+        <span class="icon-tile icon-tile-lg">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2.5v7.5M5 7.5 8 10.5l3-3M3 13.5h10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <div class="dl-title-wrap">
+          <span class="dc-label" id="dlKind">Загрузка</span>
+          <h3 id="dlTitle">Nevad Agent</h3>
+          <p id="dlMeta">1.4.2 · Windows · 148 МБ</p>
+        </div>
+        <button class="dl-close" type="button" id="dlClose" aria-label="Закрыть окно загрузки">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <div class="dl-file">
+        <span id="dlFile">NevadAgent-1.4.2-win-x64.exe</span>
+        <span id="dlSize">148 МБ</span>
+      </div>
+      <div class="dl-checksum">sha256 <code id="dlHash">9f2c4b7e…a71e</code></div>
+
+      <div class="dl-progress" role="progressbar" aria-label="Прогресс загрузки" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="dlProgress">
+        <span id="dlBar"></span>
+      </div>
+      <div class="dl-status-row">
+        <span class="dl-status" id="dlStatus" aria-live="polite">Подключение к зеркалу…</span>
+        <span class="dl-percent" id="dlPercent">0%</span>
+      </div>
+
+      <div class="dl-note">
+        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M8 7.5v3M8 5.2v.4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        Демо-макет сайта: файл имитируется и не сохраняется на диск.
+      </div>
+
+      <div class="dl-actions">
+        <button class="btn btn-lift" type="button" id="dlCopy">Скопировать ссылку</button>
+        <button class="btn btn-lift" type="button" id="dlDone">Закрыть</button>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
